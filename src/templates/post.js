@@ -1,8 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { graphql } from "gatsby"
-
-// import '../css/blog-post.css';
+import { graphql, Link } from "gatsby"
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data
@@ -16,6 +14,18 @@ export default function Template({ data }) {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>
+    </div>
+  )
+}
+
+export const Preview = ({ title, excerpt, date, to }) => {
+  return (
+    <div>
+      <h1>
+        <Link to={to}>{title}</Link>
+      </h1>
+      <h2>{date}</h2>
+      <p>{excerpt}</p>
     </div>
   )
 }
