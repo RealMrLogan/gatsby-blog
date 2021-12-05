@@ -8,7 +8,7 @@ export default function Index({ data }) {
   return (
     <main className='max-w-5xl m-auto px-6 font-inter'>
       <Header />
-      <div className="grid grid-cols-12 gap-5">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-12">
         {React.Children.toArray(posts
           .filter(post => post.node.frontmatter.title.length > 0)
           .map(({ node: post }, index) => {

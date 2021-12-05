@@ -7,7 +7,7 @@ const tagMap = {
 
 export const Tags = ({ tags }) => {
   return (
-    <div className='flex gap-1'>
+    <div className='flex gap-1 my-2'>
       {React.Children.toArray(
         tags.map((tag) => (
           <span className={`px-3 py-1 rounded-full ${tagMap[tag.toLowerCase()].join(' ')}`}>{tag}</span>
