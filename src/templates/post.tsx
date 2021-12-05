@@ -18,18 +18,6 @@ export default function Template(props: PageProps) {
   )
 }
 
-export const Preview = ({ title, excerpt, date, to }) => {
-  return (
-    <div>
-      <h1>
-        <Link to={to}>{title}</Link>
-      </h1>
-      <h2>{date}</h2>
-      <p>{excerpt}</p>
-    </div>
-  )
-}
-
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {

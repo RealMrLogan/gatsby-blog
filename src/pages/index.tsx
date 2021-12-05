@@ -1,31 +1,28 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
-import logo from '../images/logo.svg'
-import './root.module.css'
-import * as styles from './index.module.css'
-import { Preview } from '../templates/post'
-
-// TODO: add typscript
+import { PostPreview, Header } from '../components'
 
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark
   return (
-    <main className={styles['container']}>
-      <img src={logo} alt='Mr.Logan' />
-      <div className="blog-posts">
+    <main className='max-w-5xl m-auto px-6 font-inter'>
+      <Header />
+      <div className="grid grid-cols-12 gap-5">
         {React.Children.toArray(posts
           .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            const { title, date, path } = post.frontmatter
+          .map(({ node: post }, index) => {
+            const { title, date, path, featuredImage, featuredImageAlt, tags } = post.frontmatter
             return (
-              <Preview title={title} excerpt={post.excerpt} date={date} to={path} />
+              <PostPreview title={title} excerpt={post.excerpt} date={date} to={path} img={{ src: featuredImage, alt: featuredImageAlt }} tags={tags.split(', ')} large={index === 0} />
             )
           }))}
       </div>
     </main>
   )
 }
+
+// TODO: get images to be webp for mobile
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -38,6 +35,16 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 200
+                  formats: [AUTO, WEBP]
+                )
+              }
+            }
+            featuredImageAlt
+            tags
           }
         }
       }

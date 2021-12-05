@@ -3,7 +3,7 @@ const path = require("path")
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/post.tsx`)
+  const blogPostTemplate = path.resolve(`src/templates/Post.tsx`)
 
   const result = await graphql(`
     {
@@ -34,4 +34,26 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {} // additional data can be passed via context
     })
   })
+}
+
+exports.onCreateBabelConfig = ({ actions }) => {
+  actions.setBabelPlugin({
+    name: '@babel/plugin-transform-react-jsx',
+    options: {
+      runtime: 'automatic',
+    },
+  })
+}
+
+exports.sourceNodes = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type MarkdownRemark implements Node @infer {
+      frontmatter: Frontmatter!
+    }
+
+    type Frontmatter @infer {
+      image: File @fileByRelativePath
+    }
+  `
 }
