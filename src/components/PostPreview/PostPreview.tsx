@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Tags } from '../Tags'
 
 interface PreviewProps {
   img: {
@@ -23,10 +24,10 @@ export const PostPreview = ({ img, title, date, excerpt, tags, to, large }: Prev
         <GatsbyImage className='rounded-lg w-full col-span-1' image={image} alt={img.alt} />
       </Link>
       <div>
-        {/* tags */}
-        <h1 className='font-bold text-3xl'>{title}</h1>
-        <span>{date}</span>
-        <p className='font-medium'>{excerpt}</p>
+        <Tags tags={tags} />
+        <h1 className='font-bold text-3xl text-ink-darkest'>{title}</h1>
+        <span className='text-sm text-ink-base'>{date}</span>
+        <p className='font-medium text-ink-darkest'>{excerpt}</p>
       </div>
     </div>
   )
