@@ -44,16 +44,3 @@ exports.onCreateBabelConfig = ({ actions }) => {
     },
   })
 }
-
-exports.sourceNodes = ({ actions }) => {
-  const { createTypes } = actions
-  const typeDefs = `
-    type MarkdownRemark implements Node @infer {
-      frontmatter: Frontmatter!
-    }
-
-    type Frontmatter @infer {
-      image: File @fileByRelativePath
-    }
-  `
-}

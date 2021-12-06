@@ -22,8 +22,6 @@ export default function Index({ data }) {
   )
 }
 
-// TODO: get images to be webp for mobile
-
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
@@ -38,7 +36,7 @@ export const pageQuery = graphql`
             featuredImage {
               childImageSharp {
                 gatsbyImageData(
-                  width: 200
+                  quality: 90
                   formats: [AUTO, WEBP]
                 )
               }

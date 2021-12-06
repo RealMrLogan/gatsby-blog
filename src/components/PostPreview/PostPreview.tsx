@@ -21,7 +21,7 @@ export const PostPreview = ({ img, title, date, excerpt, tags, to, large }: Prev
   return (
     <div className={large ? 'grid grid-cols-2 gap-5 md:col-span-12' : 'col-span-1 md:col-span-4'}>
       <Link to={to}>
-        <GatsbyImage className='rounded-lg w-full col-span-1' image={image} alt={img.alt} />
+        <GatsbyImage className={`rounded-lg w-full col-span-1 max-h-60 ${large ? 'h-full' : ''}`} image={image} alt={img.alt} />
       </Link>
       <div>
         <Tags tags={tags} />

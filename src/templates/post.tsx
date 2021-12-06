@@ -5,14 +5,11 @@ import { graphql, Link, PageProps } from "gatsby"
 export default function Template(props: PageProps) {
   const post = props.data['markdownRemark']
   return (
-    <div className="blog-post-container">
+    <div>
       {/* <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} /> */}
-      <div className="blog-post">
+      <div>
         <h1>{post.frontmatter.title}</h1>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </div>
   )
