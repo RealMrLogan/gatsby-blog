@@ -4,7 +4,7 @@ date: 2017-07-12T17:12:33.962Z
 title: My First Gatsby Post
 featuredImage: placeholder.jpg
 featuredImageAlt: ''
-tags:  tech, getting-started
+tags:  getting-started
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum purus porta ipsum sollicitudin, luctus euismod leo eleifend. Nullam sed erat ac justo hendrerit accumsan ut in sem. Fusce vel lorem dapibus elit feugiat scelerisque a vitae ex. Nunc eget blandit urna. Vestibulum varius libero ut accumsan ultrices. Ut feugiat elit vel libero viverra, quis semper ipsum suscipit. Vivamus nec dui tortor. Donec sagittis nisi ac imperdiet hendrerit. Etiam a ullamcorper nisl. Integer varius eros nulla, tincidunt imperdiet nibh efficitur sit amet. Phasellus eleifend fringilla nunc quis porttitor. Vivamus sit amet urna eget eros blandit pulvinar. Aliquam eu sapien vitae ligula semper imperdiet vel eget urna. Nullam vehicula, quam a iaculis egestas, erat justo cursus dolor, et blandit ligula orci et tortor.
