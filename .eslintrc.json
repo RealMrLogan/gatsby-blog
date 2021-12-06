@@ -21,6 +21,10 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off",
+        "react/function-component-definition": "off",
+        "semi": [2, "never"],
+        "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
+        "react/react-in-jsx-scope": "off"
     }
 }
