@@ -1,8 +1,9 @@
 import React from "react"
 
 const tagMap = {
-  'tech': ['bg-blue-lightest', 'text-blue-darkest'],
-  'getting-started': ['bg-green-lightest', 'text-green-darkest']
+  'tech': ['bg-yellow-lightest', 'text-yellow-darkest'],
+  'getting-started': ['bg-green-lightest', 'text-green-darkest'],
+  'react': ['bg-blue-lightest', 'text-blue-darkest']
 }
 
 export const Tags = ({ tags }) => {

@@ -5,7 +5,8 @@ module.exports = {
     backgroundColor: theme => ({
       ...theme('colors'),
       'blue-lightest': '#C9F0FF',
-      'green-lightest': '#ECFCE5'
+      'green-lightest': '#ECFCE5',
+      'yellow-lightest': '#FFEFD7'
     }),
     fontFamily: {
       inter: ['Inter', 'sans-serif']
@@ -14,7 +15,8 @@ module.exports = {
       'ink-base': '#404446',
       'ink-darkest': '#090A0A',
       'blue-darkest': '#0065D0',
-      'green-darkest': '#198155'
+      'green-darkest': '#198155',
+      'yellow-darkest': '#A05E03'
     }
   },
   variants: {

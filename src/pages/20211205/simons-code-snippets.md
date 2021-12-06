@@ -4,7 +4,7 @@ date: 2021-12-05
 title: Simon Høiberg's Code Snippets
 featuredImage: blurry-vision-w-computer.jpg
 featuredImageAlt: Glasses in front of a blurred computer screen
-tags:  tech
+tags:  tech, react
 ---
 
 ## Preface
