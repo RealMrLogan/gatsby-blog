@@ -5,6 +5,7 @@ title: Simon Høiberg's Code Snippets
 featuredImage: blurry-vision-w-computer.jpg
 featuredImageAlt: Glasses in front of a blurred computer screen
 tags:  tech, react
+excerpt: Maecenas non vehicula purus. Duis vehicula viverra arcu, sit amet pellentesque dolor tincidunt nec.
 ---
 
 ## Preface

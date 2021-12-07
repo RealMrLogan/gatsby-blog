@@ -7,14 +7,15 @@ export default function Template(props: PageProps) {
   const post = props.data.markdownRemark
   return (
     <>
-      <div className="max-w-prose m-auto">
+      <div className="max-w-5xl m-auto px-6">
         <Header />
       </div>
       {/* <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} /> */}
-      <div className="prose m-auto">
+      <div className="prose m-auto px-6">
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
+      <div className="h-10" />
     </>
   )
 }
