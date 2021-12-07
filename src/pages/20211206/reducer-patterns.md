@@ -22,7 +22,7 @@ const [state, dispatch] = useReducer(reducer, initialState)
 dispatch({ type: 'ADD_ONE' })
 ```
 
-## One
+## 1. Switch/Case
 ```js
 const reducer = (state, action) => {
   switch (action.type) {
@@ -32,7 +32,7 @@ const reducer = (state, action) => {
 }
 ```
 
-## Two
+## 2. Function
 ```js
 const reducer = (state, action) => {
   const actionsMap = {
@@ -40,5 +40,20 @@ const reducer = (state, action) => {
   }
 
   return actionsMap[action.type]?.() || state
+}
+```
+
+## 3. If/Else
+```js
+const reducer = (state, action) => {
+  let newState
+  
+  if (action.type === 'ADD_ONE') {
+    newState = {...state, num: state.num + 1}
+  } else {
+    newState = {...state}
+  }
+
+  return newState
 }
 ```
