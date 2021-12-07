@@ -5,7 +5,7 @@ title: Reducer Patterns Used in React
 featuredImage: minimal-plant.jpg
 featuredImageAlt: Plant in white pot with white background
 tags:  tech, react
-excerpt: Maecenas non vehicula purus. Duis vehicula viverra arcu, sit amet pellentesque dolor tincidunt nec.
+excerpt: There are a few different ways to reduce state using a reducer, here a few that I have found.
 ---
 
 Here are some patterns I have come across while reducing state in React.
