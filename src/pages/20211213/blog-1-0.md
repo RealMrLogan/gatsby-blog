@@ -19,4 +19,4 @@ Am I done with the design of my blog? No. Am I done tweaking things here and the
 
 By the way, this is my 3rd attempt at starting a blog. 1st was just a vanilla site, right when I had started my college degree. I was pretty naive and it never got past the first HTML page. My 2nd was a few years later, using Next.js and a lot more experience. Still pretty new though. It quietly died in the corner because I could never get a good dev environment set up nor an automated pipeline. Lastly, here we are.
 
-This post is brought to you by Gatsby, TypeScript, Tailwind, and Netlify. Here's to this not being the last post.
+This post is brought to you by Gatsby, TypeScript, Tailwind, and Netlify. Here's to not being the last one.
