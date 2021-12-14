@@ -7,6 +7,7 @@ module.exports = {
       'blue-lightest': '#C9F0FF',
       'green-lightest': '#ECFCE5',
       'yellow-lightest': '#FFEFD7',
+      'purple-lightest': '#E7E7FF',
       'ink-darkest': '#090A0A',
     }),
     fontFamily: {
@@ -19,6 +20,7 @@ module.exports = {
       'blue-darkest': '#0065D0',
       'green-darkest': '#198155',
       'yellow-darkest': '#A05E03',
+      'purple-darkest': '#5538EE',
     },
   },
   variants: {

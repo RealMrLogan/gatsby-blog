@@ -5,7 +5,7 @@ title: Reducer Patterns Used in React
 featuredImage: minimal-plant.jpg
 featuredImageAlt: Plant in white pot with white background
 tags:  tech, react
-excerpt: There are a few different ways to reduce state using a reducer, here a few that I have found.
+excerpt: There are different ways to reduce state using a reducer, here a few that I have found.
 ---
 
 Here are some patterns I have come across while reducing state in React.
@@ -32,6 +32,7 @@ const reducer = (state, action) => {
   }
 }
 ```
+The is the pattern that I first learned and used for a long time. It makes sense, it's all over Stack Overflow, it's not super clunky. 'Ol reliable.
 
 ## 2. Function
 ```js
@@ -43,6 +44,7 @@ const reducer = (state, action) => {
   return actionsMap[action.type]?.() || state
 }
 ```
+This is my new favorite. When I first saw it, I thought it was weird that you would call a function in order to get the state. But it looks a lot cleaner in my opinion, and it's shorter too!
 
 ## 3. If/Else
 ```js
@@ -58,3 +60,4 @@ const reducer = (state, action) => {
   return newState
 }
 ```
+Not sure why you would choose this over option 1, but I guess you could do it this way too.

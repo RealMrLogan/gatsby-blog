@@ -25,6 +25,7 @@
         "react/function-component-definition": "off",
         "semi": [2, "never"],
         "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-props-no-spreading": "off"
     }
 }
