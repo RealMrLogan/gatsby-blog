@@ -24,9 +24,9 @@ export const PostPreview = ({
       <GatsbyImage className={`rounded-lg w-full col-span-1 max-h-60 h-60 ${large ? 'h-full' : ''}`} image={image} alt={img.alt} />
       <div>
         <Tags tags={tags} />
-        <h1 className="font-bold text-3xl text-ink-darkest">{title}</h1>
-        <span className="text-sm text-ink-base">{date}</span>
-        <p className="font-medium text-ink-darkest">{excerpt}</p>
+        <h1 className="font-bold text-3xl text-stone-800">{title}</h1>
+        <span className="text-sm text-stone-500">{date}</span>
+        <p className="font-medium text-stone-800">{excerpt}</p>
       </div>
     </Link>
   )
